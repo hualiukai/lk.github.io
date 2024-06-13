@@ -21,29 +21,26 @@ a:hover{color: #FF0000;}
 	<h1 class="mytitle">219970718 刘凯</h1>
 	<ul id="dowebok">
 		<li>
-			<div><a href=客户端实验3/index.html"><img data-original="img/tibet-1.jpg" src="img/tibet-1.jpg" alt="图片1"></a></div>
-			<div class="dt"><a href="客户端实验3/index.html">实验3：ES6新特性的应用</a></div>
+			<div><a href="实验3：普通网页布局展示/index.html"><img data-original="images/tibet-1.jpg" src="images/tibet-1.jpg" alt="图片1"></a></div>
+			<div class="dt"><a href="实验3：普通网页布局展示/index.html">实验3：ES6 新特性的应用</a></div>
 		</li>
 		<li>
-			<div><a href="练习2 使用DOM操纵图片/index.html"><img data-original="img/tibet-2.jpg" src="img/tibet-2.jpg" alt="图片2"></a></div>
-			<div class="dt"><a href="实验3：普通网页布局展示/index.html">练习2 使用DOM操纵图片</a></div>
+			<div><a href="练习2 使用DOM操纵图片/index.html"><img data-original="images/tibet-2.jpg" src="images/tibet-2.jpg" alt="图片2"></a></div>
+			<div class="dt"><a href="练习2 使用DOM操纵图片/index.html">练习2 使用DOM操纵图片</a></div>
 		</li>
 		<li>
-			<div><img data-original="img/tibet-1.jpg" src="img/tibet-1.jpg" alt="图片1"></div>
-			<div class="dt">作品1：普通网页布局展示</div>
+			<div><a href="图形展示/index.html"><img data-original="images/tibet-1.jpg" src="images/tibet-1.jpg" alt="图片1"></a></div>
+			<div class="dt"><a href="图形展示/index.html">图形展示</a></div>
 		</li>
-		<li>
-			<div><img data-original="img/tibet-2.jpg" src="img/tibet-2.jpg" alt="图片2"></div>
-			<div class="dt">作品2：普通网页布局展示</div>
+        <li>
+			<div><a href="坦克移动/index.html"><img data-original="images/tibet-2.jpg" src="images/tibet-2.jpg" alt="图片2"></a></div>
+			<div class="dt"><a href="坦克移动/index.html">坦克移动</a></div>
 		</li>
-		<li>
-			<div><img data-original="img/tibet-1.jpg" src="img/tibet-1.jpg" alt="图片1"></div>
-			<div class="dt">作品1：普通网页布局展示</div>
+        <li>
+			<div><a href="客户端实验4/index.html"><img data-original="images/tibet-2.jpg" src="images/tibet-2.jpg" alt="图片2"></a></div>
+			<div class="dt"><a href="客户端实验4/index.html">实验4</a></div>
 		</li>
-		<li>
-			<div><img data-original="img/tibet-2.jpg" src="img/tibet-2.jpg" alt="图片2"></div>
-			<div class="dt">作品2：普通网页布局展示</div>
-		</li>
+		
 	</ul>
 
 </body>
