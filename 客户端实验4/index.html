@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>果汁饮品广告</title>
+<!--219970718 刘凯-->
+
+</head>
+<body>
+	<div class="content">
+	    <h1 class="title">探索我们的果汁饮品系列</h1>
+		<div class="text">
+		<h2>探索我们的果汁饮品系列</h2>
+		<p>探索我们的果汁饮品系列，让您的口感与天然之美相遇。</p>
+		<p>无添加糖，无人工色素，纯天然的果味带给您健康与美味的完美结合。</p>
+		<p>每一口都是一场鲜果的盛宴，为您带来清新、纯净的味蕾享受。</p>
+		<p>让我们的果汁成为您每天生活中的一部分，为您带来清新活力与无尽的享受。</p>
+		</div>
+    </div>
+<!-- 左右对联广告 -->
+<div class="float-ad left-ad">
+  <img src="img/1.jpg" alt="左对联广告">
+  <img src="img/close.png" alt="关闭" class="close-btn" onclick="closeAd('.left-ad')">
+</div>
+
+<div class="float-ad right-ad">
+  <img src="img/2.jpg" alt="右对联广告">
+  <img src="img/close.png" alt="关闭" class="close-btn" onclick="closeAd('.right-ad')">
+</div>
+
+<!-- 右下角弹窗广告 -->
+<div id="popupAd" class="popup-ad">
+  <img src="img/4.jpg" alt="弹窗广告">
+  <img src="img/close.png" alt="关闭" class="close-btn" onclick="closePopupAd()">
+</div>
+
+<!-- 添加内容，使页面高度超过浏览器窗口 -->
+<div class="content"></div>
+
+<script>
+  // 左右对联广告关闭功能
+  function closeAd(adClass) {
+    var ad = document.querySelector(adClass);
+    ad.style.display = 'none';
+    if (adClass === '.left-ad') {
+      document.querySelector('.right-ad').style.display = 'none'; // 关闭左侧广告时，同时关闭右侧广告
+    } else {
+      document.querySelector('.left-ad').style.display = 'none'; // 关闭右侧广告时，同时关闭左侧广告
+    }
+  }
+
+  // 右下角弹窗广告显示和关闭功能
+  function closePopupAd() {
+    document.getElementById('popupAd').style.bottom = '-200px';
+  }
+
+  window.onload = function() {
+    // 弹窗广告延迟显示
+    setTimeout(function() {
+      document.getElementById('popupAd').style.bottom = '20px';
+    }, 500); // 500毫秒后出现
+  }
+</script>
+</body>
+</html>
 
