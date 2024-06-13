@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>坦克移动</title>
+    <style type="text/css">
+        input{font-size:26px;margin-top: 20px;}
+        body{background-image: url(images/grassland.png);}
+        #mytank{position: absolute;left:10px;top:100px}
+    </style>
+</head>
+<body>        
+    <img id="mytank" src="images/down.png"/> <!-- 初始化为朝下的坦克 -->
 
+<!--219970718 刘凯!-->
+
+    <script>
+		
+		
+        // 获取坦克元素
+        var tank = document.getElementById("mytank");
+
+        // 定义坦克的初始位置和步长
+        var tankLeft = 10;
+        var tankTop = 100;
+        var step = 10;
+		//219970733魏权康
+        // 监听键盘事件
+        document.addEventListener("keydown", function(event) {
+            switch(event.key) {
+                case "a": // A键，向左移动
+                    moveLeft();
+                    break;
+                case "w": // W键，向上移动
+                    moveUp();
+                    break;
+                case "d": // D键，向右移动
+                    moveRight();
+                    break;
+                case "s": // S键，向下移动
+                    moveDown();
+                    break;
+            }
+        });
+
+        // 向左移动
+        function moveLeft() {
+            tank.src = "images/left.png"; // 切换为朝左的坦克图片
+            tankLeft -= step;
+            tank.style.left = tankLeft + "px";
+        }
+
+        // 向上移动
+        function moveUp() {
+            tank.src = "images/up.png"; // 切换为朝上的坦克图片
+            tankTop -= step;
+            tank.style.top = tankTop + "px";
+        }
+
+        // 向右移动
+        function moveRight() {
+            tank.src = "images/right.png"; // 切换为朝右的坦克图片
+            tankLeft += step;
+            tank.style.left = tankLeft + "px";
+        }
+
+        // 向下移动
+        function moveDown() {
+            tank.src = "images/down.png"; // 切换为朝下的坦克图片
+            tankTop += step;
+            tank.style.top = tankTop + "px";
+        }
+    </script>
+</body>
+</html>
