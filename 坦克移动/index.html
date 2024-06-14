@@ -5,12 +5,12 @@
     <title>坦克移动</title>
     <style type="text/css">
         input{font-size:26px;margin-top: 20px;}
-        body{background-image: url(images/grassland.png);}
+        body{background-image: url(grassland.png);}
         #mytank{position: absolute;left:10px;top:100px}
     </style>
 </head>
 <body>        
-    <img id="mytank" src="images/down.png"/> <!-- 初始化为朝下的坦克 -->
+    <img id="mytank" src="down.png"/> <!-- 初始化为朝下的坦克 -->
 
 <!--219970718 刘凯!-->
 
@@ -45,28 +45,28 @@
 
         // 向左移动
         function moveLeft() {
-            tank.src = "images/left.png"; // 切换为朝左的坦克图片
+            tank.src = "left.png"; // 切换为朝左的坦克图片
             tankLeft -= step;
             tank.style.left = tankLeft + "px";
         }
 
         // 向上移动
         function moveUp() {
-            tank.src = "images/up.png"; // 切换为朝上的坦克图片
+            tank.src = "up.png"; // 切换为朝上的坦克图片
             tankTop -= step;
             tank.style.top = tankTop + "px";
         }
 
         // 向右移动
         function moveRight() {
-            tank.src = "images/right.png"; // 切换为朝右的坦克图片
+            tank.src = "right.png"; // 切换为朝右的坦克图片
             tankLeft += step;
             tank.style.left = tankLeft + "px";
         }
 
         // 向下移动
         function moveDown() {
-            tank.src = "images/down.png"; // 切换为朝下的坦克图片
+            tank.src = "down.png"; // 切换为朝下的坦克图片
             tankTop += step;
             tank.style.top = tankTop + "px";
         }
