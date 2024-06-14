@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>DOM操作-练习</title>
+		<style type="text/css">
+			body {
+				font-size: 13px;
+				line-height: 25px;
+			}
+			
+			table {
+				border-top: 1px solid #333;
+				border-left: 1px solid #333;
+				width: 300px;
+			}
+			
+			td {
+				border-right: 1px solid #333;
+				border-bottom: 1px solid #333;
+			}
+			
+			.center {
+				text-align: center;
+			}
+		</style>
+		<!-- 199000136 蒋鑫 -->
+		<!-- 通过CDN引入jQuery库 -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			//网页DOM加载后执行
+			$(document).ready(function(){
+				// 增加一行，给b1按钮绑定事件
+				$("#b1").click(function(){
+					var table = $("#myTable"); //获取id为myTable的标签
+					var newRow = $("<tr>"); //设置需要插入的标签
+					newRow.append("<td style='text-align:left;'>幸福从天而降</td>"); //添加子元素
+					newRow.append("<td>&yen;18.50</td>").attr("align", "center"); 
+					table.append(newRow); //在<table>标签里最后面添加<tr>标签
+				});
+		
+				// 删除第二行，给b2按钮绑定事件
+				$("#b2").click(function(){
+					var row2 = $("table tr:eq(2)"); //获取<tbale>标签里第三个<tr>标签
+					row2.remove(); //删除标签
+				});
+		
+				// 修改标题样式，给b3按钮绑定事件
+				$("#b3").click(function(){
+					//改变id为row1的标签的样式
+					$("#row1").css({"font-weight": "bold", "text-align": "center", "background-color": "#cccccc"});
+				});
+		
+				// 复制最后一行，给b4按钮绑定事件
+				$("#b4").click(function(){
+					var oldRow = $("table tr:last"); //获取<table>标签里最后的<tr>标签
+					var newRow = oldRow.clone(); //进行克隆
+					$("#myTable").append(newRow); //在<table>标签里最后面添加克隆的标签
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<table border="0" cellspacing="0" cellpadding="0" id="myTable">
+			<tr id="row1">
+				<td>书名</td>
+				<td>价格</td>
+			</tr>
+			<tr id="row2">
+				<td>看得见风景的房间</td>
+				<td class="center">&yen;30.00</td>
+			</tr>
+			<tr id="row3">
+				<td>60个瞬间</td>
+				<td class="center">&yen;32.00</td>
+			</tr>
+		</table>
+		<input id="b1" type="button" value="增加一行" onclick="addRow()" />
+		<input id="b2" type="button" value="删除第2行" onclick="delRow()" />
+		<input id="b3" type="button" value="修改标题样式" onclick="updateRow()" />
+		<input id="b4" type="button" value="复制最后一行" onclick="copyRow()" />
+
+	</body>
+
+</html>
