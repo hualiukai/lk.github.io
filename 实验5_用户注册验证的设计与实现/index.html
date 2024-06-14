@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用户注册</title>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  body {
+    background-image: url('img/background.jpg'); /* 背景图像的 URL */
+    background-repeat: repeat; /* 图像重复方式 */
+    /* 可选：设置背景图像的其他属性，如背景尺寸、位置等 */
+  }
+  .success-message {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="registration-form">
+  <h2>用户注册</h2>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="username">用户名：</label>
+      <input type="text" id="username" name="username">
+      <div class="error-message" id="usernameError"></div>
+    </div>
+    <div class="form-group">
+      <label for="password">密码：</label>
+      <input type="password" id="password" name="password">
+      <div class="error-message" id="passwordError"></div>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">确认密码：</label>
+      <input type="password" id="confirmPassword" name="confirmPassword">
+      <div class="error-message" id="confirmPasswordError"></div>
+    </div>
+    <div class="form-group">
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email">
+      <div class="error-message" id="emailError"></div>
+    </div>
+    <button type="submit">注册</button>
+	
+  </form>
+</div>
+
+<!-- 注册成功提示框 -->
+<div class="success-message" id="successMessage" style="display: none;">
+  注册成功！
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/registration.js"></script>
+<script>
+  // 注册成功后显示提示框
+  $(document).ready(function(){
+    $("#registrationForm").submit(function(event){
+      event.preventDefault();
+      // 假设注册成功后的处理函数为showSuccessMessage()
+      showSuccessMessage();
+    });
+  });
+
+  function showSuccessMessage() {
+    $("#successMessage").show();
+  }
+</script>
+</body>
+</html>
